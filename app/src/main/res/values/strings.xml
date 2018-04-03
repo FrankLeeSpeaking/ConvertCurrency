@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Convert Currency</string>
+    <string name="userHint">enter amount here</string>
+    <string name="radioDollarsToYen">US Dollar to Japanese Yen</string>
+    <string name="radioYenToDollar">Japanese Yen to US Dollar</string>
+    <string name="buttonConvert">Tap to Convert</string>
+    <string name="convertedValue">Converted Value</string>
+    <string-array name="currencyArray">Currency to convert
+        <item>Yen</item>
+        <item>Peso</item>
+
+    </string-array>
+
+</resources>
