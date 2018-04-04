@@ -48,15 +48,17 @@ public class MainActivity extends AppCompatActivity {
                     if (userAmount > 10000) {
                         Toast.makeText(MainActivity.this, "This app can only calculate up to 10,000 USD", Toast.LENGTH_LONG).show();
                     } else {
-                        displayResult.setText(currencyUSD.format(userAmount) + " USD equals " + currencyJPY.format(endResult) + " JPY");
-                    }
+                        String toNippon = (currencyUSD.format(userAmount) + " USD equals " + currencyJPY.format(endResult) + " JPY");
+                        displayResult.setText(toNippon);
+                                            }
                 }// ----- END dollarToYen IF
                 if (yenToDollar.isChecked()) {
                     endResult = userAmount * jpy_to_USD;
                     if (endResult > 10000) {
                         Toast.makeText(MainActivity.this, "This app can only calculate up to 10,000 USD or approximately 1,000,000 yen", Toast.LENGTH_LONG).show();
                     } else {
-                        displayResult.setText(currencyJPY.format(userAmount) + " JPY equals " + currencyUSD.format(endResult) + " USD");
+                        String toUSA = (currencyJPY.format(userAmount) + " JPY equals " + currencyUSD.format(endResult) + " USD");
+                        displayResult.setText(toUSA);
                     }
                 }// ----- END yenToDollar IF
             }

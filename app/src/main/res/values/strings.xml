@@ -4,7 +4,9 @@
     <string name="radioDollarsToYen">US Dollar to Japanese Yen</string>
     <string name="radioYenToDollar">Japanese Yen to US Dollar</string>
     <string name="buttonConvert">Tap to Convert</string>
-    <string name="convertedValue">Converted Value</string>
+    <string name="convertedValue">converted value</string>
+
+
     <string-array name="currencyArray">Currency to convert
         <item>Yen</item>
         <item>Peso</item>
