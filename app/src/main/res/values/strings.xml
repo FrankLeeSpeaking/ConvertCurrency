@@ -6,7 +6,6 @@
     <string name="buttonConvert">Tap to Convert</string>
     <string name="convertedValue">converted value</string>
 
-
     <string-array name="currencyArray">Currency to convert
         <item>Yen</item>
         <item>Peso</item>
