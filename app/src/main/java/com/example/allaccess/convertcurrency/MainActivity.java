@@ -17,9 +17,10 @@ import static com.example.allaccess.convertcurrency.R.mipmap.ic_launcher_foregro
 
 
 public class MainActivity extends AppCompatActivity {
+
     double userAmount = 0;
-    double usd_to_JPY = 105.898;
-    double jpy_to_USD = 0.0094;
+    double usd_to_JPY = 106.846;// exchange rate as of 12:41 am, April 5
+    double jpy_to_USD = 1/usd_to_JPY;// set for simple division to avoid rounding errors
     double endResult;
 
     @Override
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View view) {
                 userAmount = Double.parseDouble(amount.getText().toString());
-                NumberFormat currencyJPY = NumberFormat.getCurrencyInstance(Locale.JAPAN);
+                NumberFormat currencyJPY = NumberFormat.getCurrencyInstance(Locale.JAPAN);//---- yen is the only unit of currency in Nippon and has no decimals
                 NumberFormat currencyUSD = NumberFormat.getCurrencyInstance(Locale.US);
 
                 if (dollarToYen.isChecked()) {
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 if (yenToDollar.isChecked()) {
                     endResult = userAmount * jpy_to_USD;
                     if (endResult > 10000) {
-                        Toast.makeText(MainActivity.this, "This app can only calculate up to 10,000 USD or approximately 1,000,000 yen", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "This app can only calculate up to 10,000 USD or approximately 1,000,000 JPY", Toast.LENGTH_LONG).show();
                     } else {
                         String toUSA = (currencyJPY.format(userAmount) + " JPY equals " + currencyUSD.format(endResult) + " USD");
                         displayResult.setText(toUSA);
@@ -63,9 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 }// ----- END yenToDollar IF
             }
         });
-
-
-
 
     }// --------- END onCreate
 }//-------END MainActivity
